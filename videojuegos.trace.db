@@ -1,0 +1,14 @@
+2026-08-25 14:47:42.806082-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "delete from videojuegos \000d\000awhere nombre [*]Dead Cells"
+Syntax error in SQL statement "delete from videojuegos \000d\000awhere nombre [*]Dead Cells"; SQL statement:
+delete from videojuegos 
+where nombre Dead Cells [42000-240]
+2026-08-25 14:47:48.092607-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "delete from videojuegos \000d\000awhere nombre = Dead [*]Cells"
+Syntax error in SQL statement "delete from videojuegos \000d\000awhere nombre = Dead [*]Cells"; SQL statement:
+delete from videojuegos 
+where nombre = Dead Cells [42000-240]
+2026-08-25 14:49:11.876415-03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Error de Sintaxis en sentencia SQL "drop [*]from videojuegos"; se esperaba "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, AGGREGATE, SYNONYM"
+Syntax error in SQL statement "drop [*]from videojuegos"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from videojuegos [42001-240]
