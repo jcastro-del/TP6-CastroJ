@@ -1,6 +1,8 @@
 package resol.castroj.vista;
 
 import java.util.Scanner;
+import java.util.List;  //agregamos esto para el tp7 
+import resol.castroj.dto.VideojuegoDto; //agregamos esto para tp7
 
 //vista de videojuego
 //esta clase solo va a preguntar info para dsp devolverle esos datos al controlador 
@@ -8,7 +10,28 @@ public class VideojuegoVista {
 
     Scanner scanner = new Scanner(System.in);
 
+    //mostrar un videojuego 
+    public void mostrarVideojuego( VideojuegoDto videojuego){
+        System.out.println("====================");
+        System.out.println("ID: " + videojuego.getId());
+        System.out.println("Nombre : " + videojuego.getNombre());
+        System.out.println("Precio : " + videojuego.getPrecio());
+        System.out.println("Necesita Reposicion: " + videojuego.isNecesitaReposicion());
+        System.out.println("====================");
 
+    }
+
+    //mostrar varios juegos 
+    //recibimos la lista de dto 
+    public void mostrarVideojuegos(List<VideojuegoDto> videojuegos){
+
+        //recorremos la lista de dto
+        for (VideojuegoDto videojuego : videojuegos){
+            //cada dto q sacamos de la lista se lo madamos al metodo de arriba para q lo muestre 
+            mostrarVideojuego(videojuego);
+        }
+    
+    }
     //pedimso al usuario id, nombre, genero, precio, etc
     public int pedirId() {
 
